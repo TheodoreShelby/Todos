@@ -1,38 +1,72 @@
-.App {
+.wrapper {
+  border: 1px solid purple;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+.wrapper h1 {
+  text-transform: uppercase;
   text-align: center;
+  font-weight: 600;
+  font-size: 2.5em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-list {
+  min-height: 350px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
+  text-transform: capitalize;
+  font-size: 1.5em;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+li:hover {
+  padding: 12px 0;
+}
+
+li:hover span:nth-child(2) {
+  display: inline-block;
+}
+
+li span:nth-child(2) {
+  margin-right: 10px;
+  display: block;
+  border: 1px solid red;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: lowercase;
+  font-size: 1em;
+  display: none;
+}
+
+li span:nth-child(2):hover {
+  background-color: red;
+  color: white;
+  transition: 0.3s;
+}
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* 
+  add todos
+ */
+.add-todos {
+  text-align: center;
+  min-height: 50px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-todos input,
+.add-todos button {
+  line-height: 20px;
 }
